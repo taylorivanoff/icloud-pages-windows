@@ -2,7 +2,7 @@
   "name": "icloud-pages",
   "description": "Use iCloud Pages in a native Windows application.",
   "author": { "name": "Taylor Ivanoff" },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "repository": "https://github.com/taylorivanoff/icloud-pages-windows",
   "main": "main.js",
   "scripts": { "start": "electron .", "release": "electron-builder --win --x64 --publish=never" },
@@ -10,7 +10,10 @@
     "appId": "io.github.taylorivanoff.icloud-pages",
     "productName": "iCloud Pages",
     "win": { "icon": "icon.png", "target": "nsis" },
-    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "include": "installer.nsh", "deleteAppDataOnUninstall": true }
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "include": "installer.nsh", "deleteAppDataOnUninstall": true },
+    "publish": { "provider": "github", "owner": "taylorivanoff", "repo": "icloud-pages-windows" },
+    "protocols": { "name": "iCloud Pages", "schemes": ["icloud-pages"] }
   },
+  "dependencies": { "electron-store": "^8.2.0", "electron-updater": "^6.1.8" },
   "devDependencies": { "electron": "^30.0.3", "electron-builder": "^24.13.3" }
 }
