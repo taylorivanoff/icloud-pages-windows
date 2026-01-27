@@ -1,6 +1,9 @@
 const { app, BrowserWindow, session, Tray, Menu, nativeImage, shell } = require('electron');
 const path = require('path');
 
+// Use shared session storage so all iCloud apps share authentication
+app.setPath('sessionData', path.join(app.getPath('appData'), 'icloud-session'));
+
 let mainWindow, tray, isQuitting = false;
 const gotTheLock = app.requestSingleInstanceLock();
 
@@ -13,7 +16,7 @@ else {
 
 function createWindow() {
   if (mainWindow) return;
-  mainWindow = new BrowserWindow({ width: 1920, height: 1080, webPreferences: { nodeIntegration: true, partition: 'persist:icloud-pages' } });
+  mainWindow = new BrowserWindow({ width: 1920, height: 1080, webPreferences: { nodeIntegration: true, partition: 'persist:icloud' } });
   const ses = mainWindow.webContents.session;
   ses.webRequest.onBeforeSendHeaders((details, callback) => {
     details.requestHeaders['User-Agent'] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Safari/605.1.15";
@@ -44,4 +47,4 @@ function createTray() {
 
 app.on('ready', () => { createWindow(); createTray(); });
 app.on('window-all-closed', (event) => { if (!isQuitting) event.preventDefault(); });
-app.on('before-quit', async () => { await session.fromPartition('persist:icloud-pages').cookies.flushStore(); });
+app.on('before-quit', async () => { await session.fromPartition('persist:icloud').cookies.flushStore(); });
