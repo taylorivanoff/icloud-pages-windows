@@ -2,7 +2,7 @@
   "name": "icloud-pages",
   "description": "Use iCloud Pages in a native Windows application.",
   "author": { "name": "Taylor Ivanoff" },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/taylorivanoff/icloud-pages-windows",
   "main": "main.js",
   "scripts": { "start": "electron .", "release": "electron-builder --win --x64 --publish=never" },
