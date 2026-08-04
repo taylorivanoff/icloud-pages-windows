@@ -1,13 +1,11 @@
-# iCloud Pages for Windows — Unofficial Desktop App
+# iCloud Pages for Windows
 
 [![Release](https://img.shields.io/github/v/release/taylorivanoff/icloud-pages-windows)](https://github.com/taylorivanoff/icloud-pages-windows/releases)
 [![Downloads](https://img.shields.io/github/downloads/taylorivanoff/icloud-pages-windows/total)](https://github.com/taylorivanoff/icloud-pages-windows/releases)
 [![License](https://img.shields.io/github/license/taylorivanoff/icloud-pages-windows)](LICENSE)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/taylorivanoff)
 
-Unofficial **iCloud Pages for Windows** desktop app. Access iCloud Pages from [icloud.com](https://www.icloud.com/) in a dedicated Electron client with system tray, auto-updates, and shared Apple ID authentication.
-
-Edit Apple Pages documents on Windows via iCloud with a native-feeling Electron desktop app and system tray.
+iCloud Pages desktop app for Windows. Access iCloud Pages from [icloud.com](https://www.icloud.com/).
 
 ## Features
 
@@ -41,7 +39,7 @@ bun run release
 
 ## Keywords
 
-iCloud Pages for Windows, Apple Pages Windows app, Pages on PC, unofficial iCloud Pages desktop client
+iCloud Pages for Windows, Apple Pages Windows app, Pages on PC, iCloud Pages desktop client
 
 ## Contributing
 
