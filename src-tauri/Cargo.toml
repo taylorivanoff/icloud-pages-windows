@@ -1,6 +1,6 @@
 [package]
 name = "icloud-pages"
-version = "2.0.2"
+version = "2.0.3"
 description = "iCloud Pages for Windows (Tauri)"
 authors = ["Taylor Ivanoff"]
 edition = "2021"
